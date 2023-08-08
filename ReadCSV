@@ -1,0 +1,33 @@
+// import csv file 
+from google.colab import files 
+uploaded = files.upload()
+
+//read 
+import pandas as pd 
+import io
+
+df = pd.read_csv(io.BytesIO(uploaded['business.csv'])) print(df)
+
+df.size
+
+df.shape
+
+//read another method 
+import pandas as pd 
+csvFile = pd.read_csv('business.csv') 
+print(csvFile)
+
+//train data 
+import pandas as pd 
+import io from sklearn.linear_model 
+import LinearRegression from sklearn.model_selection 
+import train_test_split
+
+data = { 'feature1': [1, 2, 3, 4, 5], 'feature2': [5, 4, 3, 2, 1], 'target': [10, 20, 30, 40, 50] } df = pd.DataFrame(data)
+
+x = df.iloc[:, :-1] y = df.iloc[:, -1]
+
+x_train, x_test, y_train, y_test = train_test_split( x, y, test_size = 0.05, random_state = 0 ) model = LinearRegression() model.fit(x_train, y_train) y_pred = model.predict(x_test) print("Predicted values:", y_pred)
+
+r2_score = model.score(x_test, y_test)
+print("R-squared score:", r2_score)
