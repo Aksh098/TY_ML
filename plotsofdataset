@@ -1,0 +1,20 @@
+// Scatter plot
+import matplotlib.pyplot as plt
+x = df['Cylinders']  
+y = df['Length']
+plt.xlabel('Cylinders')
+plt.ylabel('Length')
+plt.title('Cyliners vs Length')
+plt.scatter(x, y)
+plt.show()
+
+// Pie chart
+
+import matplotlib.pyplot as plt
+x = df['Cylinders']  
+y = df['Length']
+plt.xlabel('Cylinders')
+plt.ylabel('Length')
+plt.title('Cyliners vs Length')
+plt.scatter(x, y)
+plt.show()
