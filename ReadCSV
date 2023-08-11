@@ -31,3 +31,9 @@ x_train, x_test, y_train, y_test = train_test_split( x, y, test_size = 0.05, ran
 
 r2_score = model.score(x_test, y_test)
 print("R-squared score:", r2_score)
+
+import numpy as np
+import pandas as pd
+np.isnan(df)
+
+df.isnull()
